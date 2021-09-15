@@ -13,7 +13,7 @@ import FormTrening.FormNoviTrening;
 import FormTrening.FormPretragaTreninga;
 import FormVezbeZaTrening.FormDodajVezbeZaTrening;
 import FormVezbeZaTrening.FormVezbeZaTrening;
-import com.sun.security.ntlm.Client;
+
 import controller.ClientController;
 import domain.Administrator;
 import domain.VezbaZaTermin;
