@@ -24,7 +24,22 @@
     </dependency>
     
     </dependencies>
-    <plugins>
+  <build>
+		<resources>
+			<resource>
+				<directory>${basedir}/src/main/resources</directory>
+				<includes>
+					<include>
+                        Messages.properties
+                    </include>
+					<include>
+                        Messages_sr_RS.properties
+                    </include>
+				</includes>
+			</resource>
+		</resources>
+
+		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -48,4 +63,5 @@
 				<version>2.6</version>
 			</plugin>
 		</plugins>
+	</build>
 </project>
