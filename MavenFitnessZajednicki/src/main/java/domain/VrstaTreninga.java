@@ -18,13 +18,28 @@ import java.util.Objects;
  * @author aca99
  */
 public class VrstaTreninga extends AbstractDomainObject implements Serializable {
-
+	 /**
+   	 *   Jedinstvena šifra vrste treninga, tipa Long.
+   	 */
     private Long vrstaTreningaID;
+    /**
+     * Naziv vrste treninga, tipa String
+     */
     private String nazivVrsteTreninga;
-
+    /**
+   	 * Konstruktor koji samo inicijalizuje objekat klase VrstaTreninga.
+   	 */
     public VrstaTreninga() {
     }
-
+    /**
+   	 * Konstruktor koji inicijalizuje objekat i postavlja vrednost svih atributa
+   	 * treninga.
+   	 * 
+   	 * @param vrstaTreningaID
+   	 *            Šifra  vrste treninga tipa Long.
+   	 * @param nazivVrsteTreninga
+   	 *            Naziv vrste treninga tipa String.
+   	 */
     public VrstaTreninga(long vrstaTreningaID, String nazivVrsteTreninga) {
         this.vrstaTreningaID = vrstaTreningaID;
         this.nazivVrsteTreninga = nazivVrsteTreninga;
@@ -47,19 +62,37 @@ public class VrstaTreninga extends AbstractDomainObject implements Serializable 
         }
         return true;
     }
-
+    /**
+  	 * Vraæa id(šifru) vrste treninga.
+  	 * 
+  	 * @return  Šifra vrste treninga tipa Long.
+  	 */
     public Long getVrstaTreningaID() {
         return vrstaTreningaID;
     }
-
+    /**
+   	 * Postavlja jedinstvenu šifru vrste treninge na novu vrednost.
+   	 * 
+   	 * @param vrstaTreningaID
+   	 *           Jedinstvena šifra vrste treninga kao Long.
+   	 */
     public void setVrstaTreningaID(Long vrstaTreningaID) {
         this.vrstaTreningaID = vrstaTreningaID;
     }
-
+    /**
+  	 * Vraæa naziv vrste treninga.
+  	 * 
+  	 * @return  Naziv vrste treninga tipa String.
+  	 */
     public String getNazivVrsteTreninga() {
         return nazivVrsteTreninga;
     }
-
+    /**
+   	 * Postavlja naziv vrste treninga na novu vrednost.
+   	 * 
+   	 * @param nazivVrsteTreninga
+   	 *            Naziv vrste treninga tipa String.
+   	 */
     public void setNazivVrsteTreninga(String nazivVrsteTreninga) {
         this.nazivVrsteTreninga = nazivVrsteTreninga;
     }
