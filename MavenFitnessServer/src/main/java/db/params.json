@@ -1,0 +1,5 @@
+{
+  "connectionString": "jdbc:mysql://localhost:3306/fitnesscentar",
+  "username": "root",
+  "password": ""
+}

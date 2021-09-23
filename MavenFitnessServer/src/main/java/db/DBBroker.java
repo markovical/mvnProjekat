@@ -6,16 +6,21 @@
 package db;
 
 import domain.AbstractDomainObject;
+
+
+import java.io.FileReader;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
+
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
+
+
+import com.google.gson.Gson;
 
 /**
  *
@@ -27,14 +32,18 @@ public class DBBroker {
 
     public DBBroker() {
         try {
+        	FileReader file = new FileReader("params.json");
+    		Gson gson = new Gson();
+    		DBParameters dbp = gson.fromJson(file, DBParameters.class);
             connection=
-                    DriverManager.getConnection("jdbc:mysql://localhost:3306/fitnesscentar", "root", "");
+                    DriverManager.getConnection(dbp.connectionString, dbp.username,dbp.password);
             connection.setAutoCommit(false);
         } catch (SQLException ex) {
             ex.printStackTrace();
+        } catch(Exception e){
+        	e.printStackTrace();
         }
     }
-
     public Connection getConnection() {
         return connection;
     }
