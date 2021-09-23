@@ -28,7 +28,7 @@ public abstract class AbstractDomainObject implements Serializable {
 	 */
     public abstract String nazivTabele();
     /**
-	 * Metoda koja vraća alijas tabele u bazi.
+	 * Metoda koja vraća alijas tabele u bazi koji koristimo pri pisanju upita.
 	 * 
 	 * @return Alijas tabele u bazi kao String.
 	 */
@@ -37,7 +37,7 @@ public abstract class AbstractDomainObject implements Serializable {
 	 * Metoda koja vraća kriterijum po kome se vrši join u SQL upitima.
 	 * 
 	 * @return Vraća kriterijum po kome se vrši join u SQL upitima, kao String.
-	 *         Vraća null ako se nad tom tabelom ne vrši nikakvo spajanje sa drugom
+	 *         Vraća null ili prazan string ako se nad tom tabelom ne vrši nikakvo spajanje sa drugom
 	 *         tabelom.
 	 */
     public abstract String join();
@@ -45,7 +45,7 @@ public abstract class AbstractDomainObject implements Serializable {
      * Metoda koja vraća listu objekata tipa AbstractDomainObject 
      * 
      * @param rs
-     * 			Odnosno tabela koja je tipa ResultSet
+     * 			Tabela koja je tipa ResultSet
      * @return Vraća listu objekata tipa AbstractDomainObject 
      * @throws SQLException
      * 			Kada mysql javi grešku pri izvlačenju kolona iz baze
@@ -74,7 +74,7 @@ public abstract class AbstractDomainObject implements Serializable {
     public abstract String vrednostiZaInsert();
     /**
 	 * Metoda koja vraća sve vrednosti atributa objekta koje mogu da se menjaju operacijom
-	 * ažuriranja.
+	 * a�uriranja.
 	 * 
 	 * @return Vraća sve vrednosti atributa objekta koje mogu da se menjaju
 	 *         operacijom ažuriranja, kao String.
