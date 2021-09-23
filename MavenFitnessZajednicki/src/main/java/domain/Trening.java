@@ -15,28 +15,61 @@ import java.util.Date;
 import java.util.Objects;
 
 /**
- *
- * @author aca99
+ * Klasa koja predstavlja trening
+ * 
+ * Trening ima atribute:
+ * treningID tipa Long
+ * nazivTreninga tipa String
+ * vrstaTreninga objekat klase VrstaTreninga
  */
 public class Trening extends AbstractDomainObject implements Serializable {
-
+	/**
+	 * Jedinstvena šifra treninga, tipa Long.
+	 */
     private Long treningID;
+    /**
+     * Naziv treninga tipa String
+     */
     private String nazivTreninga;
+    /**
+     *  Vrsta treninga kao objekat klase VrstaTreninga
+     */
     private VrstaTreninga vrstaTreninga;
-
+    /**
+   	 * Konstruktor koji samo inicijalizuje objekat klase Trening.
+   	 */
     public Trening() {
     }
-
+    /**
+   	 * Konstruktor koji inicijalizuje objekat i postavlja vrednost svih atributa
+   	 * treninga.
+   	 * 
+   	 * @param treningID
+   	 *            Šifra treninga tipa Long.
+   	 * @param nazivTreninga
+   	 *            Naziv treninga tipa String.
+   	 * @param vrstaTreninga
+   	 *            Vrsta treninga kao objekat klase VrstaTreninga.
+   	 */
     public Trening(Long treningID, String nazivTreninga, VrstaTreninga vrstaTreninga) {
         this.treningID = treningID;
         this.nazivTreninga = nazivTreninga;
         this.vrstaTreninga = vrstaTreninga;
     }
-
+    /**
+  	 * Vraća id(šifru) treninga.
+  	 * 
+  	 * @return  Šifra treninga tipa Long.
+  	 */
     public VrstaTreninga getVrstaTreninga() {
         return vrstaTreninga;
     }
-
+    /**
+   	 * Postavlja vrstu treninga na novu vrednost.
+   	 * 
+   	 * @param vrstaTreninga
+   	 *            Vrsta treninga kao objekat klase VrstaTreninga.
+   	 */
     public void setVrstaTreninga(VrstaTreninga vrstaTreninga) {
         this.vrstaTreninga = vrstaTreninga;
     }
@@ -61,19 +94,37 @@ public class Trening extends AbstractDomainObject implements Serializable {
         }
         return true;
     }
-
+    /**
+  	 * Vraća sifru treninga.
+  	 * 
+  	 * @return  Šifra treninga tipa Long.
+  	 */
     public Long getTreningID() {
         return treningID;
     }
-
+    /**
+   	 * Postavlja šifru treninga na novu vrednost.
+   	 * 
+   	 * @param treningID
+   	 *            Šifra treninga tipa Long.
+   	 */
     public void setTreningID(Long treningID) {
         this.treningID = treningID;
     }
-
+    /**
+  	 * Vraća naziv treninga.
+  	 * 
+  	 * @return  Naziv treninga tipa String.
+  	 */
     public String getNazivTreninga() {
         return nazivTreninga;
     }
-
+    /**
+   	 * Postavlja naziv treninga na novu vrednost.
+   	 * 
+   	 * @param nazivTreninga
+   	 *            Naziv treninga tipa String.
+   	 */
     public void setNazivTreninga(String nazivTreninga) {
         this.nazivTreninga = nazivTreninga;
     }

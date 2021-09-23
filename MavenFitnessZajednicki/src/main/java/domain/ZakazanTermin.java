@@ -20,17 +20,51 @@ import java.util.Date;
  * @author aca99
  */
 public class ZakazanTermin extends AbstractDomainObject implements Serializable {
-
+	/**
+	 * Jedinstvena šifra zakazanog termina, tipa Long.
+	 */
     private Long zakazanTerminID;
+    /**
+	 * Datum i vreme zakazanog termina, tipa Date.
+	 */
     private Date datumVreme;
+    /**
+	 * Objekat klase Administrator.
+	 */
     private Administrator administrator;
+    /**
+   	 * Objekat klase Klijent.
+   	 */
     private Klijent klijent;
+    /**
+   	 * Objekat klase Trening.
+   	 */
     private Trening trening;
+    /**
+   	 * Lista vežbi za termin, tipa ArrayList.
+   	 */
     private ArrayList<VezbaZaTermin> vezbeZaTermin;
-
+    /**
+   	 * Konstruktor koji samo inicijalizuje objekat klase ZakazanTermin.
+   	 */
     public ZakazanTermin() {
     }
-
+    /**
+   	 * Konstruktor koji inicijalizuje objekat i postavlja vrednost svih atributa
+   	 * treninga.
+   	 * 
+   	 * @param zakazanTerminID
+   	 *            Šifra zakazanog termina tipa Long.
+   	 * @param datumVreme
+   	 *            Datum i vreme zakazanog termina, tipa Date.
+   	 * @param administrator
+   	 *            Objekat klase Administrator.
+   	 * @param trening
+   	 *            Objekat klase Trening.
+   	 * @param vezbeZaTermin
+   	 *            Lista objekata vezba za termin klase VezbaZaTermin .
+   	 *            
+   	 */
     public ZakazanTermin(Long zakazanTerminID, Date datumVreme, Administrator administrator, Klijent klijent, Trening trening, ArrayList<VezbaZaTermin> vezbeZaTermin) {
         this.zakazanTerminID = zakazanTerminID;
         this.datumVreme = datumVreme;
@@ -39,51 +73,105 @@ public class ZakazanTermin extends AbstractDomainObject implements Serializable 
         this.trening = trening;
         this.vezbeZaTermin = vezbeZaTermin;
     }
-
+    /**
+  	 * Vraæa id(šifru) zakazanog termina.
+  	 * 
+  	 * @return  Jedinstvena šifra zakazanog termina, tipa Long.
+  	 */
     public Long getZakazanTerminID() {
         return zakazanTerminID;
     }
-
+    /**
+   	 * Postavlja  šifru zakazanog termina na novu vrednost.
+   	 * 
+   	 * @param zakazanTerminID
+   	 *            Šifra zakazanog termina tipa Long.
+   	 */
     public void setZakazanTerminID(Long zakazanTerminID) {
         this.zakazanTerminID = zakazanTerminID;
     }
-
+    /**
+  	 * Vraæa datum i vreme zakazanog termina.
+  	 * 
+  	 * @return  Datum i vreme zakazanog termina, tipa Date.
+  	 */
     public Date getDatumVreme() {
         return datumVreme;
     }
-
+    /**
+   	 * Postavlja datum i vreme zakazanog termina na novu vrednost.
+   	 * 
+   	 * @param datumVreme
+   	 *            Datum i vreme zakazanog termina, tipa Date.
+   	 */
     public void setDatumVreme(Date datumVreme) {
         this.datumVreme = datumVreme;
     }
-
+    /**
+  	 * Vraæa administratora.
+  	 * 
+  	 * @return  Administrator zakazanog termina, tipa Administrator.
+  	 */
     public Administrator getAdministrator() {
         return administrator;
     }
-
+    /**
+   	 * Postavlja datum i vreme zakazanog termina na novu vrednost.
+   	 * 
+   	 * @param administrator
+   	 *            Objekat klase Administrator.
+   	 */
     public void setAdministrator(Administrator administrator) {
         this.administrator = administrator;
     }
-
+    /**
+  	 * Vraæa klijenta zakazanog termina.
+  	 * 
+  	 * @return  Klijent zakazanog termina, tipa Klijent.
+  	 */
     public Klijent getKlijent() {
         return klijent;
     }
-
+    /**
+   	 * Postavlja klijenta zakazanog termina na novu vrednost.
+   	 * 
+   	 * @param klijent
+   	 *            Objekat klase Klijent.
+   	 */
     public void setKlijent(Klijent klijent) {
         this.klijent = klijent;
     }
-
+    /**
+  	 * Vraæa klijenta zakazanog termina.
+  	 * 
+  	 * @return  Klijent zakazanog termina, tipa Klijent.
+  	 */
     public Trening getTrening() {
         return trening;
     }
-
+    /**
+   	 * Postavlja trening zakazanog termina na novu vrednost.
+   	 * 
+   	 * @param trening
+   	 *            Objekat klase Trening.
+   	 */
     public void setTrening(Trening trening) {
         this.trening = trening;
     }
-
+    /**
+  	 * Vraæa listu vežbi zakazanog termina.
+  	 * 
+  	 * @return  Vežbe zakazanog termina, tipa ArrayList.
+  	 */
     public ArrayList<VezbaZaTermin> getVezbeZaTermin() {
         return vezbeZaTermin;
     }
-
+    /**
+   	 * Postavlja listu vežbi zakazanog termina na novu vrednost.
+   	 * 
+   	 * @param vezbeZaTermin
+   	 *            Lista objekata vežba za termin klase VezbaZaTermin .
+   	 */
     public void setVezbeZaTermin(ArrayList<VezbaZaTermin> vezbeZaTermin) {
         this.vezbeZaTermin = vezbeZaTermin;
     }

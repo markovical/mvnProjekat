@@ -13,42 +13,94 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
- *
- * @author aca99
+ * Klasa koja predstavlja vezbe za termin
+ * 
+ * Trening ima atribute:
+ * zakazanTermin tipa ZakazTermin, odnosno objekat klase ZakazanTermin
+ * vezba tipa String
+ * broj ponavljanja kao int
  */
 public class VezbaZaTermin extends AbstractDomainObject implements Serializable {
-
+	/**
+     * Zakazan Termin tipa ZakazanTermin
+     */
     private ZakazanTermin zakazanTermin;
+    /**
+     * Redni broj vezbe tipa int
+     */
     private int redniBroj;
+    /**
+     * Vezba tipa String
+     */
     private String vezba;
+    /**
+     * Broj ponavljanja vezbe tipa int
+     */
     private int brojPonavljanja;
-
+    /**
+   	 * Konstruktor koji samo inicijalizuje objekat klase VezbaZaTermin	.
+   	 */
     public VezbaZaTermin() {
     }
-
+    /**
+   	 * Konstruktor koji inicijalizuje objekat i postavlja vrednost svih atributa
+   	 * vezba za termin.
+   	 * 
+   	 * @param zakazanTermin
+   	 *           Zakazan Termin kao ZakazanTermin.
+   	 * @param redniBroj
+   	 *           Redni broj vezbe kao int.
+   	 * @param vezba
+   	 *            Vezba kao String.
+   	 * @param brojPonavljanja
+   	 *           Broj ponavljanja vezbe kao int.
+   	 */
     public VezbaZaTermin(ZakazanTermin zakazanTermin, int redniBroj, String vezba, int brojPonavljanja) {
         this.zakazanTermin = zakazanTermin;
         this.redniBroj = redniBroj;
         this.vezba = vezba;
         this.brojPonavljanja = brojPonavljanja;
     }
-
+    /**
+   	 * Vraæa objekat klase ZakazanTermin.
+   	 * 
+   	 * @return  Šifra treninga tipa Long.
+   	 */
     public ZakazanTermin getZakazanTermin() {
         return zakazanTermin;
     }
-
+    /**
+   	 * Postavlja zakazan termin na novu vrednost.
+   	 * 
+   	 * @param zakazanTermin
+   	 *           Zakazan Termin kao objekat klase ZakazanTermin.
+   	 */
     public void setZakazanTermin(ZakazanTermin zakazanTermin) {
         this.zakazanTermin = zakazanTermin;
     }
-
+    /**
+   	 * Vraæa redni broj vezbe.
+   	 * 
+   	 * @return    Redni broj vezbe tipa int.
+   	 */
     public int getRedniBroj() {
         return redniBroj;
     }
-
+    /**
+   	 * Postavlja redni broj na novu vrednost.
+   	 * 
+   	 * @param redniBroj
+   	 *           Redni broj vezbe kao int.
+   	 */
     public void setRedniBroj(int redniBroj) {
         this.redniBroj = redniBroj;
     }
-
+    /**
+   	 * Vraæa vezbu.
+   	 * 
+   	 * @return   Vezba kao String.
+   	 */
+    
     public String getVezba() {
         return vezba;
     }
@@ -56,11 +108,20 @@ public class VezbaZaTermin extends AbstractDomainObject implements Serializable 
     public void setVezba(String vezba) {
         this.vezba = vezba;
     }
-
+    /**
+   	 * Vraæa broj ponavljanja vezbe.
+   	 * 
+   	 * @return   Broj ponavljannja kao int.
+   	 */
     public int getBrojPonavljanja() {
         return brojPonavljanja;
     }
-
+    /**
+   	 * Postavlja broj ponavljanja na novu vrednost.
+   	 * 
+   	 * @param brojPonavljanja
+   	 *           Broj ponavljanja vezbe kao int.
+   	 */
     public void setBrojPonavljanja(int brojPonavljanja) {
         this.brojPonavljanja = brojPonavljanja;
     }
